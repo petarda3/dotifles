@@ -12,6 +12,8 @@ from libqtile.layout.stack import Stack
 from libqtile.layout.floating import Floating
 from libqtile import hook, qtile
 from subprocess import call
+
+from qtile_extras import widget
 from qtile_extras.widget.decorations import BorderDecoration
 
 mod = "mod4"
@@ -106,7 +108,7 @@ groups = [
           matches=[Match(wm_class='alacritty')],
           layout="columns"),
     Group('3', label="",
-          matches=[Match(wm_class='dolphin')],
+          matches=[Match(wm_class='nemo')],
           layout="columns"),
     Group('4', label="󰙯",
           matches=[Match(wm_class='discord')],
