@@ -44,8 +44,9 @@ alias .5='cd ../../../../../'
 # Pacman aliases
 alias syu='sudo pacman -Syu'
 alias syyu='sudo pacman -Syyu'
-alias remove='sudo pacman -Rns'
+alias uninstall='sudo pacman -Rns'
 alias install='sudo pacman -S'
+alias update='sudo pacman -U'
 
 # Mirrorlist
 alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
@@ -101,4 +102,5 @@ shopt -s histappend # do not overwrite history
 shopt -s expand_aliases # expand aliases
 shopt -s checkwinsize # checks term size when bash regains control
 
-
+# Startup script
+colorscript random
