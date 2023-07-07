@@ -156,12 +156,12 @@ colors = [
 
 layout_theme = {"border_width": 2,
                 "margin": 4,
-                "border_focus": colors[8],
-                "border_normal": colors[13] 
+                "border_focus": colors[13],
+                "border_normal": colors[1] 
                 }
 
 layouts = [
-    layout.Columns(**layout_theme),
+    layout.MonadTall(**layout_theme),
 ]
 
 widget_defaults = dict(
