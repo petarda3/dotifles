@@ -161,7 +161,9 @@ layout_theme = {"border_width": 2,
                 }
 
 layouts = [
+    layout.Columns(**layout_theme),    
     layout.MonadTall(**layout_theme),
+    layout.Floating(**layout_theme)
 ]
 
 widget_defaults = dict(
