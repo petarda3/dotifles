@@ -40,6 +40,8 @@ keys = [
         desc="Launch OBS recorder"),
     Key([], "Print", lazy.spawn('flameshot'),
         desc="Launch Flameshot"),
+    Key([mod], "s", lazy.spawn('slock'),
+    desc="Launch Slock"),
 
     # Toggle floating and fullscreen
     Key([mod, "shift"], "f", lazy.window.toggle_fullscreen(),
@@ -159,7 +161,7 @@ colors = [
 layout_theme = {"border_width": 2,
                 "margin": 4,
                 "border_focus": colors[13],
-                "border_normal": colors[1] 
+                "border_normal": colors[1],
                 }
 
 layouts = [
@@ -180,7 +182,7 @@ extension_defaults = widget_defaults.copy()
 ###### SCREEN AND WIDGETS ######
 screens = [
     Screen(
-        wallpaper='~/Pictures/Wallhaven/solarized-hills.png',
+        wallpaper='~/Pictures/Wallhaven/solarized-japan.png',
         wallpaper_mode='stretch',
         top=bar.Bar(
             [
@@ -217,10 +219,11 @@ screens = [
                        background = colors[1]
                        ),
                 widget.Systray(
+                       foreground = colors[1],
                        background = colors[13]
                 ),
                 widget.Clock(
-                    format="  %d-%m-%Y  %I:%M %p",
+                    format=" %d-%m-%Y  %I:%M %p",
                     foreground = colors[9],
                     background = colors[13],
                     decorations=[
@@ -232,10 +235,10 @@ screens = [
                            )
                        ],
                        ),
-                widget.Spacer(
-                        length=2,
-                        background=colors[1]
-                       ),
+                #widget.Spacer(
+                #        length=2,
+                #        background=colors[1]
+                #       ),
                 widget.Net(
                        interface="enp3s0",
                        format = ' {down}↓↑{up}',
@@ -251,10 +254,10 @@ screens = [
                            )
                         ],
                         ),
-                widget.Spacer(
-                        length=2,
-                        background=colors[1]
-                        ),
+                #widget.Spacer(
+                #        length=2,
+                #        background=colors[1]
+                #        ),
                 widget.CPU(
                     format = ' {freq_current}GHz {load_percent}%',
                     foreground = colors[11],
@@ -265,13 +268,13 @@ screens = [
                                border_width = [0, 0, 2, 0],
                                padding_x = 5,
                                padding_y = None,
-                           )
+                           ),
                        ],
                        ),
-                widget.Spacer(
-                        length=2,
-                        background=colors[1]
-                       ),
+                #widget.Spacer(
+                #        length=2,
+                #        background=colors[1]
+                #       ),
                 widget.Memory(
                        foreground = colors[8],
                        background = colors[13],
@@ -288,10 +291,10 @@ screens = [
                        ),
             ],
             20,
-             border_width=[2, 0, 2, 0],  # Draw top and bottom borders
+             #margin=[0, 8, 0, 8],  # Draw top and bottom borders
              border_color=["#2aa198", "#2aa198", "#2aa198", "#2aa198"],  
-             opacity=0.6,
-             background=colors[12]
+             opacity=0.8,
+             background=colors[12],
         ),
     ),
 ]
